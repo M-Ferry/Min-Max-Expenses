@@ -1,7 +1,11 @@
-const button = document.querySelector(".show-results");
-const results = document.querySelector(".results");
-const expensesList = document.querySelector(".expenses");
 
+/////for results button
+const button = document.querySelector(".show-results");
+////for results
+const results = document.querySelector(".results");
+/////for expenses
+const expensesList = document.querySelector(".expenses");
+/////list of expenses
 const expenses = [
 	9.99,
 	25.8,
@@ -25,13 +29,17 @@ for (let exp of expenses) {
 
 // Write showMinMax function here
 const showMinMax = function (expenses) {
+	/////minimum expenses
 	const min = Math.min(...expenses);
+	/////maximum expenses
 	const max = Math.max(...expenses);
 
 	const minListItem = document.createElement("li");
+	////inner Text for minimum amount
 	minListItem.innerText = `Min: $ ${min}`;
 
 	const maxListItem = document.createElement("li");
+	////inner Text for maximum amount
 	maxListItem.innerText = `Max: $ ${max}`;
 
 	results.append(minListItem);
